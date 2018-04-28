@@ -1,0 +1,633 @@
+22:48:34 **** Build of project mtdsplusbt_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_0/src"
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/cpu_v2_3/src"
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/PmodBT2_v1_0/src"
+make -C microblaze_0/libsrc/PmodBT2_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/PmodMTDS_v1_0/src"
+make -C microblaze_0/libsrc/PmodMTDS_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/standalone_v5_3/src"
+make -C microblaze_0/libsrc/standalone_v5_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_1/src"
+make -C microblaze_0/libsrc/uartlite_v3_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in microblaze_0/libsrc/bram_v4_0/src"
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_3/src"
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/PmodBT2_v1_0/src"
+make -C microblaze_0/libsrc/PmodBT2_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling PmodBT2..."
+"Running Make libs in microblaze_0/libsrc/PmodMTDS_v1_0/src"
+make -C microblaze_0/libsrc/PmodMTDS_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling PmodMTDS..."
+"Running Make libs in microblaze_0/libsrc/standalone_v5_3/src"
+make -C microblaze_0/libsrc/standalone_v5_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_1/src"
+make -C microblaze_0/libsrc/uartlite_v3_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartlite"
+'Finished building libraries'
+22:48:46 **** Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2024	    288	   3120	   5432	   1538	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+22:49:59 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+./src/main.o: In function `main':
+E:\Digilent\programe\Digilent_contest\Digilent_contest.sdk\mtdsplusbt\Debug/../src/main.cc:13: undefined reference to `setup()'
+E:\Digilent\programe\Digilent_contest\Digilent_contest.sdk\mtdsplusbt\Debug/../src/main.cc:16: undefined reference to `loop()'
+collect2.exe: error: ld returned 1 exit status
+make: *** [mtdsplusbt.elf] Error 1
+22:50:51 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/MyDispDemo2.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MyDispDemo2.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/MyDispDemo2.d" -MT"src/MyDispDemo2.d" -o "src/MyDispDemo2.o" "../src/MyDispDemo2.cc"
+../src/MyDispDemo2.cc: In function 'void setup()':
+../src/MyDispDemo2.cc:116:80: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(0, "Images/IMG_0001.BMP", "Images/IMG_0002.BMP",  10, 270);
+                                                                                ^
+../src/MyDispDemo2.cc:116:80: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:117:80: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(1, "Images/IMG_0001.BMP", "Images/IMG_0002.BMP", 100, 270);
+                                                                                ^
+../src/MyDispDemo2.cc:117:80: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:118:80: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(2, "Images/IMG_0001.BMP", "Images/IMG_0002.BMP", 190, 270);
+                                                                                ^
+../src/MyDispDemo2.cc:118:80: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:123:47: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.drawImage("Images/IMG_LOGO.BMP", 0, 0);
+                                               ^
+../src/MyDispDemo2.cc: In function 'void loop()':
+../src/MyDispDemo2.cc:185:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("Images/IMG_0010.BMP", 50, 20);
+                                                     ^
+../src/MyDispDemo2.cc:187:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("Image: IMG_0010.BMP", 20, 108);
+                                                     ^
+../src/MyDispDemo2.cc:195:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("Images/IMG_0011.BMP", 30, 20);
+                                                     ^
+../src/MyDispDemo2.cc:197:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("Image: IMG_0011.BMP", 20, 108);
+                                                     ^
+../src/MyDispDemo2.cc:205:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("Images/IMG_0100.BMP", 20, 20);
+                                                     ^
+../src/MyDispDemo2.cc:207:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("Image: IMG_0100.BMP", 20, 108);
+                                                     ^
+In file included from ../../mtdsplusbt_bsp/microblaze_0/include/mtds.h:24:0,
+                 from ../../mtdsplusbt_bsp/microblaze_0/include/MyDisp.h:28,
+                 from ../src/MyDispDemo2.cc:35:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h: At global scope:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:46:17: warning: 'mic_delta' defined but not used [-Wunused-variable]
+ static uint32_t mic_delta;
+                 ^
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:49:17: warning: 'mic_cnt' defined but not used [-Wunused-variable]
+ static uint32_t mic_cnt;
+                 ^
+'Finished building: ../src/MyDispDemo2.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  58077	   6176	   4536	  68789	  10cb5	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+22:51:41 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:95:5: error: redefinition of 'int main()'
+ int main()
+     ^
+../src/main.cc:10:5: note: 'int main()' previously defined here
+ int main ()
+     ^
+../src/main.cc: In function 'void EnableCaches()':
+../src/main.cc:151:6: error: redefinition of 'void EnableCaches()'
+ void EnableCaches()
+      ^
+../src/main.cc:22:6: note: 'void EnableCaches()' previously defined here
+ void EnableCaches()
+      ^
+../src/main.cc: In function 'void DisableCaches()':
+../src/main.cc:163:6: error: redefinition of 'void DisableCaches()'
+ void DisableCaches()
+      ^
+../src/main.cc:34:6: note: 'void DisableCaches()' previously defined here
+ void DisableCaches()
+      ^
+make: *** [src/main.o] Error 1
+22:52:09 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:99:5: error: redefinition of 'int main()'
+ int main()
+     ^
+../src/main.cc:10:5: note: 'int main()' previously defined here
+ int main ()
+     ^
+../src/main.cc: In function 'void EnableCaches()':
+../src/main.cc:155:6: error: redefinition of 'void EnableCaches()'
+ void EnableCaches()
+      ^
+../src/main.cc:22:6: note: 'void EnableCaches()' previously defined here
+ void EnableCaches()
+      ^
+../src/main.cc: In function 'void DisableCaches()':
+../src/main.cc:167:6: error: redefinition of 'void DisableCaches()'
+ void DisableCaches()
+      ^
+../src/main.cc:34:6: note: 'void DisableCaches()' previously defined here
+ void DisableCaches()
+      ^
+make: *** [src/main.o] Error 1
+22:53:05 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:99:5: error: redefinition of 'int main()'
+ int main()
+     ^
+../src/main.cc:10:5: note: 'int main()' previously defined here
+ int main ()
+     ^
+../src/main.cc: In function 'void EnableCaches()':
+../src/main.cc:157:6: error: redefinition of 'void EnableCaches()'
+ void EnableCaches()
+      ^
+../src/main.cc:22:6: note: 'void EnableCaches()' previously defined here
+ void EnableCaches()
+      ^
+../src/main.cc: In function 'void DisableCaches()':
+../src/main.cc:169:6: error: redefinition of 'void DisableCaches()'
+ void DisableCaches()
+      ^
+../src/main.cc:34:6: note: 'void DisableCaches()' previously defined here
+ void DisableCaches()
+      ^
+make: *** [src/main.o] Error 1
+22:53:29 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+../src/main.cc: In function 'int main()':
+../src/main.cc:99:5: error: redefinition of 'int main()'
+ int main()
+     ^
+../src/main.cc:10:5: note: 'int main()' previously defined here
+ int main ()
+     ^
+../src/main.cc: In function 'void EnableCaches()':
+../src/main.cc:158:6: error: redefinition of 'void EnableCaches()'
+ void EnableCaches()
+      ^
+../src/main.cc:22:6: note: 'void EnableCaches()' previously defined here
+ void EnableCaches()
+      ^
+../src/main.cc: In function 'void DisableCaches()':
+../src/main.cc:170:6: error: redefinition of 'void DisableCaches()'
+ void DisableCaches()
+      ^
+../src/main.cc:34:6: note: 'void DisableCaches()' previously defined here
+ void DisableCaches()
+      ^
+make: *** [src/main.o] Error 1
+22:53:53 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+./src/main.o: In function `DemoInitialize()':
+E:\Digilent\programe\Digilent_contest\Digilent_contest.sdk\mtdsplusbt\Debug/../src/main.cc:76: undefined reference to `BT2_Begin(PmodBT2*, unsigned long, unsigned long, unsigned long, unsigned long)'
+./src/main.o: In function `DemoRun()':
+E:\Digilent\programe\Digilent_contest\Digilent_contest.sdk\mtdsplusbt\Debug/../src/main.cc:93: undefined reference to `BT2_SendData(PmodBT2*, unsigned char*, int)'
+E:\Digilent\programe\Digilent_contest\Digilent_contest.sdk\mtdsplusbt\Debug/../src/main.cc:96: undefined reference to `BT2_RecvData(PmodBT2*, unsigned char*, int)'
+collect2.exe: error: ld returned 1 exit status
+make: *** [mtdsplusbt.elf] Error 1
+22:54:38 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/PmodBT2.c'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PmodBT2.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/PmodBT2.d" -MT"src/PmodBT2.d" -o "src/PmodBT2.o" "../src/PmodBT2.c"
+'Finished building: ../src/PmodBT2.c'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66781	   6488	   4704	  77973	  13095	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+22:55:29 **** Incremental Build of configuration Debug for project mtdsplusbt ****
+make all 
+make: Nothing to be done for `all'.
+23:28:19 **** Incremental Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/MyDispDemo2.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MyDispDemo2.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/MyDispDemo2.d" -MT"src/MyDispDemo2.d" -o "src/MyDispDemo2.o" "../src/MyDispDemo2.cc"
+../src/MyDispDemo2.cc: In function 'void setup()':
+../src/MyDispDemo2.cc:116:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(0, "BmpLib/led_48x48_g_on.BMP", "Images/IMG_0002.BMP",  10, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:116:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:117:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(1, "BmpLib/led_48x48_b_on.BMP", "Images/IMG_0002.BMP", 100, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:117:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:118:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(2, "BmpLib/led_48x48_r_on.BMP", "Images/IMG_0002.BMP", 190, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:118:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:123:47: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.drawImage("Images/IMG_LOGO.BMP", 0, 0);
+                                               ^
+../src/MyDispDemo2.cc: In function 'void loop()':
+../src/MyDispDemo2.cc:185:75: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/checkbox_checked_black_on_gray.BMP", 20, 20);
+                                                                           ^
+../src/MyDispDemo2.cc:187:39: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("START", 160, 25);
+                                       ^
+../src/MyDispDemo2.cc:195:70: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/back_arrow_black_on_grayy.BMP", 20, 20);
+                                                                      ^
+../src/MyDispDemo2.cc:197:39: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("RESET", 160, 25);
+                                       ^
+../src/MyDispDemo2.cc:205:59: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/led_24x24_r_on.BMP", 20, 20);
+                                                           ^
+../src/MyDispDemo2.cc:207:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("STOP", 160, 25);
+                                      ^
+In file included from ../../mtdsplusbt_bsp/microblaze_0/include/mtds.h:24:0,
+                 from ../../mtdsplusbt_bsp/microblaze_0/include/MyDisp.h:28,
+                 from ../src/MyDispDemo2.cc:35:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h: At global scope:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:46:17: warning: 'mic_delta' defined but not used [-Wunused-variable]
+ static uint32_t mic_delta;
+                 ^
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:49:17: warning: 'mic_cnt' defined but not used [-Wunused-variable]
+ static uint32_t mic_cnt;
+                 ^
+'Finished building: ../src/MyDispDemo2.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66861	   6488	   4704	  78053	  130e5	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+23:31:33 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66853	   6488	   4704	  78045	  130dd	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+23:37:50 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/MyDispDemo2.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MyDispDemo2.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/MyDispDemo2.d" -MT"src/MyDispDemo2.d" -o "src/MyDispDemo2.o" "../src/MyDispDemo2.cc"
+../src/MyDispDemo2.cc: In function 'void setup()':
+../src/MyDispDemo2.cc:116:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(0, "BmpLib/led_48x48_g_on.BMP", "Images/IMG_0002.BMP",  10, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:116:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:117:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(1, "BmpLib/led_48x48_b_on.BMP", "Images/IMG_0002.BMP", 100, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:117:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:118:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(2, "BmpLib/led_48x48_r_on.BMP", "Images/IMG_0002.BMP", 190, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:118:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:123:47: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.drawImage("Images/IMG_LOGO.BMP", 0, 0);
+                                               ^
+../src/MyDispDemo2.cc: In function 'void loop()':
+../src/MyDispDemo2.cc:185:75: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/checkbox_checked_black_on_gray.BMP", 20, 20);
+                                                                           ^
+../src/MyDispDemo2.cc:188:39: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("START", 160, 25);
+                                       ^
+../src/MyDispDemo2.cc:196:70: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/back_arrow_black_on_grayy.BMP", 20, 20);
+                                                                      ^
+../src/MyDispDemo2.cc:198:39: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("RESET", 160, 25);
+                                       ^
+../src/MyDispDemo2.cc:206:59: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/led_24x24_r_on.BMP", 20, 20);
+                                                           ^
+../src/MyDispDemo2.cc:208:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("STOP", 160, 25);
+                                      ^
+In file included from ../../mtdsplusbt_bsp/microblaze_0/include/mtds.h:24:0,
+                 from ../../mtdsplusbt_bsp/microblaze_0/include/MyDisp.h:28,
+                 from ../src/MyDispDemo2.cc:35:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h: At global scope:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:46:17: warning: 'mic_delta' defined but not used [-Wunused-variable]
+ static uint32_t mic_delta;
+                 ^
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:49:17: warning: 'mic_cnt' defined but not used [-Wunused-variable]
+ static uint32_t mic_cnt;
+                 ^
+'Finished building: ../src/MyDispDemo2.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  66909	   6488	   4704	  78101	  13115	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+23:37:57 **** Incremental Build of configuration Debug for project mtdsplusbt ****
+make all 
+make: Nothing to be done for `all'.
+23:39:09 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/MyDispDemo2.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MyDispDemo2.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/MyDispDemo2.d" -MT"src/MyDispDemo2.d" -o "src/MyDispDemo2.o" "../src/MyDispDemo2.cc"
+../src/MyDispDemo2.cc: In function 'void setup()':
+../src/MyDispDemo2.cc:116:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(0, "BmpLib/led_48x48_g_on.BMP", "Images/IMG_0002.BMP",  10, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:116:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:117:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(1, "BmpLib/led_48x48_b_on.BMP", "Images/IMG_0002.BMP", 100, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:117:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:118:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(2, "BmpLib/led_48x48_r_on.BMP", "Images/IMG_0002.BMP", 190, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:118:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:123:47: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.drawImage("Images/IMG_LOGO.BMP", 0, 0);
+                                               ^
+../src/MyDispDemo2.cc: In function 'void loop()':
+../src/MyDispDemo2.cc:185:75: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/checkbox_checked_black_on_gray.BMP", 20, 20);
+                                                                           ^
+../src/MyDispDemo2.cc:188:39: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("START", 160, 25);
+                                       ^
+../src/MyDispDemo2.cc:196:70: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/back_arrow_black_on_grayy.BMP", 20, 20);
+                                                                      ^
+../src/MyDispDemo2.cc:199:39: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("RESET", 160, 25);
+                                       ^
+../src/MyDispDemo2.cc:207:59: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/led_24x24_r_on.BMP", 20, 20);
+                                                           ^
+../src/MyDispDemo2.cc:210:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("STOP", 160, 25);
+                                      ^
+In file included from ../../mtdsplusbt_bsp/microblaze_0/include/mtds.h:24:0,
+                 from ../../mtdsplusbt_bsp/microblaze_0/include/MyDisp.h:28,
+                 from ../src/MyDispDemo2.cc:35:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h: At global scope:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:46:17: warning: 'mic_delta' defined but not used [-Wunused-variable]
+ static uint32_t mic_delta;
+                 ^
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:49:17: warning: 'mic_cnt' defined but not used [-Wunused-variable]
+ static uint32_t mic_cnt;
+                 ^
+'Finished building: ../src/MyDispDemo2.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67013	   6488	   4704	  78205	  1317d	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+23:40:48 **** Incremental Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/MyDispDemo2.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/MyDispDemo2.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/MyDispDemo2.d" -MT"src/MyDispDemo2.d" -o "src/MyDispDemo2.o" "../src/MyDispDemo2.cc"
+../src/MyDispDemo2.cc: In function 'void setup()':
+../src/MyDispDemo2.cc:116:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(0, "BmpLib/led_48x48_g_on.BMP", "Images/IMG_0002.BMP",  10, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:116:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:117:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(1, "BmpLib/led_48x48_b_on.BMP", "Images/IMG_0002.BMP", 100, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:117:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:118:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.createButton(2, "BmpLib/led_48x48_r_on.BMP", "Images/IMG_0002.BMP", 190, 270);
+                                                                                      ^
+../src/MyDispDemo2.cc:118:86: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+../src/MyDispDemo2.cc:123:47: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+   mydisp.drawImage("Images/IMG_LOGO.BMP", 0, 0);
+                                               ^
+../src/MyDispDemo2.cc: In function 'void loop()':
+../src/MyDispDemo2.cc:185:75: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/checkbox_checked_black_on_gray.BMP", 20, 20);
+                                                                           ^
+../src/MyDispDemo2.cc:188:39: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("START", 160, 25);
+                                       ^
+../src/MyDispDemo2.cc:196:70: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/back_arrow_black_on_grayy.BMP", 20, 20);
+                                                                      ^
+../src/MyDispDemo2.cc:199:39: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("RESET", 160, 25);
+                                       ^
+../src/MyDispDemo2.cc:207:59: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawImage("BmpLib/led_24x24_r_on.BMP", 20, 20);
+                                                           ^
+../src/MyDispDemo2.cc:210:38: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+       mydisp.drawText("STOP", 160, 25);
+                                      ^
+In file included from ../../mtdsplusbt_bsp/microblaze_0/include/mtds.h:24:0,
+                 from ../../mtdsplusbt_bsp/microblaze_0/include/MyDisp.h:28,
+                 from ../src/MyDispDemo2.cc:35:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h: At global scope:
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:46:17: warning: 'mic_delta' defined but not used [-Wunused-variable]
+ static uint32_t mic_delta;
+                 ^
+../../mtdsplusbt_bsp/microblaze_0/include/MtdsHal.h:49:17: warning: 'mic_cnt' defined but not used [-Wunused-variable]
+ static uint32_t mic_cnt;
+                 ^
+'Finished building: ../src/MyDispDemo2.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67017	   6488	   4711	  78216	  13188	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+23:45:10 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67017	   6488	   4711	  78216	  13188	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+13:23:19 **** Incremental Build of configuration Debug for project mtdsplusbt ****
+make all 
+make: Nothing to be done for `all'.
+13:33:14 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67045	   6488	   4704	  78237	  1319d	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+13:33:19 **** Incremental Build of configuration Debug for project mtdsplusbt ****
+make all 
+make: Nothing to be done for `all'.
+13:34:22 **** Auto Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67017	   6488	   4711	  78216	  13188	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+13:44:28 **** Incremental Build of configuration Debug for project mtdsplusbt ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../mtdsplusbt_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: mtdsplusbt.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../mtdsplusbt_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "mtdsplusbt.elf"  ./src/MyDispDemo2.o ./src/PmodBT2.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: mtdsplusbt.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtdsplusbt.elf  |tee "mtdsplusbt.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67017	   6488	   4711	  78216	  13188	mtdsplusbt.elf
+'Finished building: mtdsplusbt.elf.size'
+' '
+14:23:58 **** Incremental Build of configuration Debug for project mtdsplusbt ****
+make all 
+make: Nothing to be done for `all'.
+14:24:50 **** Incremental Build of configuration Debug for project mtdsplusbt ****
+make all 
+make: Nothing to be done for `all'.
