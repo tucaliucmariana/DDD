@@ -1,0 +1,314 @@
+22:46:35 INFO  : Launching XSDB server: xsdb.bat E:/xilinx_2015/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:46:38 INFO  : XSDB server has started successfully.
+22:46:40 INFO  : Processing command line option -hwspec E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper.hdf.
+22:55:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:55:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+22:55:13 INFO  : FPGA configured successfully with bitstream "E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/download.bit"
+22:55:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+22:55:31 INFO  : 'fpga -state' command is executed.
+22:55:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:55:32 INFO  : Context for processor 'microblaze_0' is selected.
+22:55:32 INFO  : Hardware design information is loaded from 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+22:55:32 INFO  : Context for processor 'microblaze_0' is selected.
+22:55:32 INFO  : Processor reset is completed for 'microblaze_0'.
+22:55:32 INFO  : Context for processor 'microblaze_0' is selected.
+22:55:33 INFO  : The application 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf' is downloaded to processor 'microblaze_0'.
+22:55:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+loadhw E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+dow E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf
+----------------End of Script----------------
+
+22:55:33 INFO  : Memory regions updated for context MicroBlaze #0
+22:55:33 INFO  : Context for processor 'microblaze_0' is selected.
+22:55:33 INFO  : 'con' command is executed.
+22:55:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+con
+----------------End of Script----------------
+
+23:28:22 INFO  : Disconnected from the channel tcfchan#1.
+23:28:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+23:28:23 INFO  : 'fpga -state' command is executed.
+23:28:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:28:23 INFO  : Context for processor 'microblaze_0' is selected.
+23:28:23 INFO  : Hardware design information is loaded from 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:28:23 INFO  : Context for processor 'microblaze_0' is selected.
+23:28:24 INFO  : Processor reset is completed for 'microblaze_0'.
+23:28:24 INFO  : Context for processor 'microblaze_0' is selected.
+23:28:25 INFO  : The application 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf' is downloaded to processor 'microblaze_0'.
+23:28:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+loadhw E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+dow E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf
+----------------End of Script----------------
+
+23:28:25 INFO  : Memory regions updated for context MicroBlaze #0
+23:28:25 INFO  : Context for processor 'microblaze_0' is selected.
+23:28:25 INFO  : 'con' command is executed.
+23:28:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+con
+----------------End of Script----------------
+
+23:37:59 INFO  : Disconnected from the channel tcfchan#2.
+23:38:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+23:38:00 INFO  : 'fpga -state' command is executed.
+23:38:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:38:00 INFO  : Context for processor 'microblaze_0' is selected.
+23:38:00 INFO  : Hardware design information is loaded from 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:38:01 INFO  : Context for processor 'microblaze_0' is selected.
+23:38:01 INFO  : Processor reset is completed for 'microblaze_0'.
+23:38:01 INFO  : Context for processor 'microblaze_0' is selected.
+23:38:02 INFO  : The application 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf' is downloaded to processor 'microblaze_0'.
+23:38:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+loadhw E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+dow E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf
+----------------End of Script----------------
+
+23:38:02 INFO  : Memory regions updated for context MicroBlaze #0
+23:38:02 INFO  : Context for processor 'microblaze_0' is selected.
+23:38:02 INFO  : 'con' command is executed.
+23:38:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+con
+----------------End of Script----------------
+
+23:40:51 INFO  : Disconnected from the channel tcfchan#3.
+23:40:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+23:40:52 INFO  : 'fpga -state' command is executed.
+23:40:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:40:52 INFO  : Context for processor 'microblaze_0' is selected.
+23:40:52 INFO  : Hardware design information is loaded from 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+23:40:52 INFO  : Context for processor 'microblaze_0' is selected.
+23:40:53 INFO  : Processor reset is completed for 'microblaze_0'.
+23:40:53 INFO  : Context for processor 'microblaze_0' is selected.
+23:40:54 INFO  : The application 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf' is downloaded to processor 'microblaze_0'.
+23:40:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+loadhw E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+dow E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf
+----------------End of Script----------------
+
+23:40:54 INFO  : Memory regions updated for context MicroBlaze #0
+23:40:54 INFO  : Context for processor 'microblaze_0' is selected.
+23:40:54 INFO  : 'con' command is executed.
+23:40:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+con
+----------------End of Script----------------
+
+01:28:01 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 229 xsdb eval "disconnect tcfchan#4"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+13:20:42 INFO  : Launching XSDB server: xsdb.bat E:/xilinx_2015/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:20:48 INFO  : XSDB server has started successfully.
+13:20:51 INFO  : Processing command line option -hwspec E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper.hdf.
+13:20:51 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+13:22:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:22:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+13:22:42 INFO  : FPGA configured successfully with bitstream "E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/download.bit"
+13:23:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+13:23:26 INFO  : 'fpga -state' command is executed.
+13:23:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:23:27 INFO  : Context for processor 'microblaze_0' is selected.
+13:23:27 INFO  : Hardware design information is loaded from 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:23:27 INFO  : Context for processor 'microblaze_0' is selected.
+13:23:27 INFO  : Processor reset is completed for 'microblaze_0'.
+13:23:28 INFO  : Context for processor 'microblaze_0' is selected.
+13:23:29 INFO  : The application 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf' is downloaded to processor 'microblaze_0'.
+13:23:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+loadhw E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+dow E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf
+----------------End of Script----------------
+
+13:23:29 INFO  : Memory regions updated for context MicroBlaze #0
+13:23:29 INFO  : Context for processor 'microblaze_0' is selected.
+13:23:29 INFO  : 'con' command is executed.
+13:23:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+con
+----------------End of Script----------------
+
+13:25:15 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 59 xsdb eval "disconnect tcfchan#1"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
+13:25:34 INFO  : Launching XSDB server: xsdb.bat E:/xilinx_2015/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+13:25:36 INFO  : XSDB server has started successfully.
+13:25:36 INFO  : Processing command line option -hwspec E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper.hdf.
+13:25:36 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+13:32:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:32:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+13:32:35 INFO  : FPGA configured successfully with bitstream "E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/download.bit"
+13:33:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+13:33:21 INFO  : 'fpga -state' command is executed.
+13:33:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:22 INFO  : Context for processor 'microblaze_0' is selected.
+13:33:22 INFO  : Hardware design information is loaded from 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:33:22 INFO  : Context for processor 'microblaze_0' is selected.
+13:33:22 INFO  : Processor reset is completed for 'microblaze_0'.
+13:33:23 INFO  : Context for processor 'microblaze_0' is selected.
+13:33:24 INFO  : The application 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf' is downloaded to processor 'microblaze_0'.
+13:33:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+loadhw E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+dow E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf
+----------------End of Script----------------
+
+13:33:24 INFO  : Memory regions updated for context MicroBlaze #0
+13:33:24 INFO  : Context for processor 'microblaze_0' is selected.
+13:33:24 INFO  : 'con' command is executed.
+13:33:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+con
+----------------End of Script----------------
+
+13:44:40 INFO  : Disconnected from the channel tcfchan#1.
+13:44:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+13:44:40 INFO  : 'fpga -state' command is executed.
+13:44:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:44:41 INFO  : Context for processor 'microblaze_0' is selected.
+13:44:41 INFO  : Hardware design information is loaded from 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+13:44:41 INFO  : Context for processor 'microblaze_0' is selected.
+13:44:41 INFO  : Processor reset is completed for 'microblaze_0'.
+13:44:42 INFO  : Context for processor 'microblaze_0' is selected.
+13:44:43 INFO  : The application 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf' is downloaded to processor 'microblaze_0'.
+13:44:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+loadhw E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+dow E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf
+----------------End of Script----------------
+
+13:44:43 INFO  : Memory regions updated for context MicroBlaze #0
+13:44:43 INFO  : Context for processor 'microblaze_0' is selected.
+13:44:43 INFO  : 'con' command is executed.
+13:44:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+con
+----------------End of Script----------------
+
+14:23:59 INFO  : Disconnected from the channel tcfchan#2.
+14:24:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+14:24:00 INFO  : 'fpga -state' command is executed.
+14:24:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:24:00 INFO  : Context for processor 'microblaze_0' is selected.
+14:24:01 INFO  : Hardware design information is loaded from 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:24:01 INFO  : Context for processor 'microblaze_0' is selected.
+14:24:01 INFO  : Processor reset is completed for 'microblaze_0'.
+14:24:01 INFO  : Context for processor 'microblaze_0' is selected.
+14:24:02 INFO  : The application 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf' is downloaded to processor 'microblaze_0'.
+14:24:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+loadhw E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+dow E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf
+----------------End of Script----------------
+
+14:24:02 INFO  : Memory regions updated for context MicroBlaze #0
+14:24:02 INFO  : Context for processor 'microblaze_0' is selected.
+14:24:02 INFO  : 'con' command is executed.
+14:24:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+con
+----------------End of Script----------------
+
+14:24:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:24:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+14:24:25 INFO  : FPGA configured successfully with bitstream "E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/download.bit"
+14:24:52 INFO  : Disconnected from the channel tcfchan#3.
+14:24:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty 210319A28BEDA" && level==0} -index 0' command is executed.
+14:24:52 INFO  : 'fpga -state' command is executed.
+14:24:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:24:53 INFO  : Context for processor 'microblaze_0' is selected.
+14:24:53 INFO  : Hardware design information is loaded from 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+14:24:53 INFO  : Context for processor 'microblaze_0' is selected.
+14:24:53 INFO  : Processor reset is completed for 'microblaze_0'.
+14:24:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:24:54 INFO  : The application 'E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf' is downloaded to processor 'microblaze_0'.
+14:24:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+loadhw E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/design_1_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+dow E:/Digilent/programe/Digilent_contest/Digilent_contest.sdk/mtdsplusbt/Debug/mtdsplusbt.elf
+----------------End of Script----------------
+
+14:24:54 INFO  : Memory regions updated for context MicroBlaze #0
+14:24:55 INFO  : Context for processor 'microblaze_0' is selected.
+14:24:55 INFO  : 'con' command is executed.
+14:24:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Arty 210319A28BEDA"} -index 0
+con
+----------------End of Script----------------
+
+14:40:42 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 184 xsdb eval "disconnect tcfchan#4"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:162)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:254)
